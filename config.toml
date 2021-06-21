@@ -1,5 +1,5 @@
 ################################### Default Configuration ############################
-baseurl = "https://megucuri.github.io/aoraki-market.github.io/"
+baseurl = "http://examplesite.com/"
 languageCode = "ja"
 title = "Aoraki | Forestry and Fabrication"
 theme = "vex-hugo"
