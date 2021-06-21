@@ -3,7 +3,7 @@ Aoraki website using HUGO framework and using "vux-hugo" theme.
 
 This is Aoraki dev repository code here will automatically change the public site.
 
-Public site link: 
+Public site link: https://megucuri.github.io/aoraki-market.github.io/
 
 
 ## Deploy HUGO to Github Pages using Github Action
