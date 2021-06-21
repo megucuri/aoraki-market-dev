@@ -1,6 +1,6 @@
 ---
-title: "All latest Smart Watch"
-description : "this is a meta description"
+title: "森の商品"
+description : "木から良いものを作る"
 draft: false
 ---
 
