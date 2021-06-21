@@ -9,20 +9,10 @@ sections:
 - type: document
   path: exampleSite/data/homepage.yml
   label: Homepage
-# - type: heading
-#   label: Blog Post
-# - type: directory
-#   path: exampleSite/content/blog
-#   label: Post
-#   create: documents
-#   match: "**/*"
-#   new_doc_ext: '20191203072044'
-#   templates:
-#   - post
 - type: heading
   label: Products
 - type: directory
-  path: /content/products
+  path: content/products
   label: Product
   create: documents
   match: "**/*"
@@ -31,12 +21,12 @@ sections:
 - type: heading
   label: Contact
 - type: document
-  path: /content/contact/_index.md
+  path: content/contact/_index.md
   label: Contact
 - type: heading
   label: All Pages
 - type: directory
-  path: /content
+  path: content
   label: All Page
   create: all
   match: "**/*"
