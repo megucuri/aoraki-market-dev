@@ -30,13 +30,13 @@ sections:
   label: All Page
   create: all
   match: "**/*"
-#   - type: heading
-#   label: Translations
-# - type: directory
-#   path: exampleSite/i18n
-#   label: i18n
-#   create: documents
-#   match: "**/*"
+  - type: heading
+  label: Translations
+- type: directory
+  path: exampleSite/i18n
+  label: i18n
+  create: documents
+  match: "**/*"
 - type: heading
   label: Configuration
 - type: document
