@@ -20,7 +20,8 @@
 
 
 <!-- Snipcart public key -->
-{{with site.Params.snipcart_api}}<div hidden id="snipcart" data-api-key="{{.}}"></div>{{end}}
+{{/*  {{with site.Params.snipcart_api}}<div hidden id="snipcart" data-api-key="{{.}}">{{ partial "snipcart-custom-form.html" . }}</div>{{end}}  */}}
+
 
 <!-- JS Plugins -->
 {{ range site.Params.plugins.js}}
@@ -30,3 +31,4 @@
 <!-- Main Script -->
 {{ $script := resources.Get "js/script.js" }}
 <script src="{{ $script.Permalink }}"></script>
+{{ partial "snipcart-custom-form.html" . }}

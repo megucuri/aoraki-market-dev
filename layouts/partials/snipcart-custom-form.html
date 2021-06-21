@@ -1,0 +1,55 @@
+{{/*  
+  To change "data-currency". Change from dashboard of Snipcart
+  https://docs.snipcart.com/v3/setup/multi-currency
+*/}}
+<!-- Snipcart public key -->
+{{with site.Params.snipcart_api}}
+<div hidden id="snipcart" data-api-key="{{.}}" data-currency="jpy">
+  <address-fields>
+    <div>
+      <fieldset class="snipcart-form__set">
+          <div class="snipcart-form__field">
+            <snipcart-label
+              class="snipcart__font--tiny"
+              for="postalCode"
+            >郵便番号</snipcart-label>
+            <snipcart-input name="postalCode" placeholder="000-000"></snipcart-input>
+            <snipcart-error-message name="postalCode"></snipcart-error-message>
+          </div>
+          <div class="snipcart-form__field snipcart-form__cell--large">
+            <snipcart-label
+              class="snipcart__font--tiny"
+              for="province"
+            >県</snipcart-label>
+            <snipcart-input name="province" placeholder="〇〇県"></snipcart-input>
+            <snipcart-error-message name="province"></snipcart-error-message>
+          </div>
+          <div class="snipcart-form__field">
+            <snipcart-label
+              class="snipcart__font--tiny"
+              for="city"
+            >市</snipcart-label>
+            <snipcart-input name="city" placeholder="〇〇市"></snipcart-input>
+            <snipcart-error-message name="city"></snipcart-error-message>
+          </div>
+          <div class="snipcart-form__field snipcart-form__cell--large">
+            <snipcart-label
+              class="snipcart__font--tiny"
+              for="address1"
+            > 住所</snipcart-label>
+            <snipcart-input name="address1" placeholder="〇〇〇〇1111-2"></snipcart-input>
+            <snipcart-error-message name="address1"></snipcart-error-message>
+          </div>
+
+        <div class="snipcart-form__field">
+          <snipcart-label
+            class="snipcart__font--tiny"
+            for="country"
+          >国</snipcart-label>
+          <snipcart-typeahead type="dropdown" name="country" autocomplete="country">
+          </snipcart-typeahead>
+        </div>
+      </fieldset>
+    </div>
+  </address-fields>
+</div>{{end}}
