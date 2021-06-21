@@ -30,6 +30,13 @@ sections:
   label: All Page
   create: all
   match: "**/*"
+  - type: heading
+  label: Translations
+- type: directory
+  path: exampleSite/i18n
+  label: i18n
+  create: documents
+  match: "**/*"
 - type: heading
   label: Configuration
 - type: document
@@ -40,7 +47,7 @@ sections:
   label: Pages
   create: all
   match: "*"
-upload_dir: static/images
+upload_dir: /static/images
 public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
