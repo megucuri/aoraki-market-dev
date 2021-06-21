@@ -26,3 +26,5 @@ fields:
 - type: tag_list
   name: sizes
   label: sizes
+pages:
+- content/products/桜薪.md
