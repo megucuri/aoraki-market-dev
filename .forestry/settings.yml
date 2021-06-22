@@ -14,11 +14,9 @@ sections:
   match: "**/*"
   templates:
   - product
-- type: heading
-  label: Contact
 - type: document
   path: content/contact/_index.md
-  label: Contact
+  label: お問い合わせ
 - type: heading
   label: All Pages
 - type: directory
