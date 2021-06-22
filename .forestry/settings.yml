@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: ホームページ
 - type: document
   path: exampleSite/data/homepage.yml
   label: ホームページ
@@ -18,10 +20,10 @@ sections:
   path: content/contact/_index.md
   label: お問い合わせ
 - type: heading
-  label: All Pages
+  label: ページ
 - type: directory
   path: content
-  label: All Page
+  label: 全ページ
   create: all
   match: "**/*"
 - type: heading
