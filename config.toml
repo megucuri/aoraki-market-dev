@@ -1,9 +1,8 @@
 ################################### Default Configuration ############################
 # For deployment
-baseurl = "https://megucuri.github.io/aoraki-market.github.io/"
+# baseurl = "https://megucuri.github.io/aoraki-market.github.io/"
 # For local
-# baseurl = "http://localhost:1313/"
-languageCode = "ja"
+baseurl = "http://localhost:1313/"
 title = "Aoraki | Forestry and Fabrication"
 theme = "vex-hugo"
 # post excert
@@ -119,11 +118,11 @@ mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463e
 mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
 
 
-################################### English language #####################################
+################################### Japanese language #####################################
 [Languages.en]
-languageName = "Ja"
+# languageName = "Ja"
 languageCode = "ja"
-# contentDir = "content/english"
+# contentDir = "content/Japanese"
 # weight = 1
 # copyright
 copyright = "© Aoraki"

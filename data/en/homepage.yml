@@ -1,0 +1,126 @@
+############################# banner ############################
+banner:
+  enable : true
+  title : "森を育てる 森で創る"
+  content : "今の時代で必要なことを問いで、発想を試し、伐採とモノ作りをしながら森と成長し続けています。"
+  image : "images/watch.png"
+  button:
+   enable : false
+   label : "Browse All Products"
+   link : "products"
+
+############################# Feature ############################
+features:
+  enable : false
+  title : "get the watch"
+  image : "https://lh3.googleusercontent.com/proxy/1ToF7_4ry6wa6VreFQZszEhpEnSzR-QMosYdrvHCmfIZadOdro_6R583X4yr_e3-rvrwmQsmkQBGMbmiAy2w4-8PTh4KwXJtZ-ZNj00DhbFVy10ZI35T7pDO6jCpjXdghRcxP7w-5Q"
+
+  # feature at the left of the image
+  left_side:
+    # feature item loop
+  - title : "Smooth Touch"
+    icon : "tf-ion-ios-alarm-outline"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+    
+    # feature item loop
+  - title : "Elegant Design"
+    icon : "tf-ion-ios-bell-outline"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+    
+    # feature item loop
+  - title : "Easy Pricing"
+    icon : "tf-ion-ios-cart-outline"
+    content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+
+  # feature at the right of the image
+  # right_side:
+  #   # feature item loop
+  # - title : "Smooth Touch"
+  #   icon : "tf-ion-ios-alarm-outline"
+  #   content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+  #   # feature item loop
+  # - title : "Elegant Design"
+  #   icon : "tf-ion-ios-bell-outline"
+  #   content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+  #   # feature item loop
+  # - title : "Easy Pricing"
+  #   icon : "tf-ion-ios-cart-outline"
+  #   content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, inventore?"
+
+
+############################# promo ############################
+promo:
+  enable : true
+  image : "https://i.pinimg.com/originals/0b/aa/83/0baa834c26c4c105ee87dbcb20c88ae2.jpg"
+  title : "トレーラーハウス"
+  content : "森をもっと楽しめるような小さな住い。"
+
+
+############################# About Product #######################
+about_product:
+  enable : true
+  title : "森づくり"
+  items:
+    # about product item loop
+    - image : "https://lh3.googleusercontent.com/proxy/1ToF7_4ry6wa6VreFQZszEhpEnSzR-QMosYdrvHCmfIZadOdro_6R583X4yr_e3-rvrwmQsmkQBGMbmiAy2w4-8PTh4KwXJtZ-ZNj00DhbFVy10ZI35T7pDO6jCpjXdghRcxP7w-5Q"
+      title : "Lorem ipsum dolor sit amet."
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
+            sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
+            quas, quo harum deserunt consequatur cumque!"
+      button:
+        enable : false
+        label : "Check Features"
+        link : "#"
+        
+    # about product item loop
+    - image : "images/showcase/showcase-3.png"
+      title : "Lorem ipsum dolor sit amet."
+      content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, sed, assumenda. Tenetur
+            sed esse, voluptas voluptate est veniam numquam, quis magni. Architecto minus suscipit
+            quas, quo harum deserunt consequatur cumque!"
+      button:
+        enable : false
+        label : "Check Features"
+        link : "#"
+
+
+#################################### Products ########################
+products:
+  enable : true
+  title : "商品"
+
+
+################################## Subscription ###################
+subscription:
+  enable : false
+  bg_image : "images/call-to-action.jpg"
+  title : "Get Product Updates"
+  content : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
+  placeholder : "Your Email Address Here"
+
+
+############################## Testimonial ##########################
+testimonial:
+  enable : false
+  title : "Watch Review"
+  testimonial_item:
+    # testimonial item loop
+    - name : "Jonathon Andrew"
+      designation : "CEO, Themefisher"
+      image : "images/avater.png"
+      content : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
+      
+    # testimonial item loop
+    - name : "Jonathon Andrew"
+      designation : "CEO, Themefisher"
+      image : "images/avater.png"
+      content : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
+      
+    # testimonial item loop
+    - name : "Jonathon Andrew"
+      designation : "CEO, Themefisher"
+      image : "images/avater.png"
+      content : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite sense of mere tranquil existence, that I neglect my talents."
