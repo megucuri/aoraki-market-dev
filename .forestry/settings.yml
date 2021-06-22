@@ -4,16 +4,12 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: heading
-  label: ホームページ
 - type: document
   path: exampleSite/data/homepage.yml
-  label: Homepage
-- type: heading
-  label: 商品
+  label: ホームページ
 - type: directory
   path: content/products
-  label: Product
+  label: 商品
   create: documents
   match: "**/*"
   templates:
