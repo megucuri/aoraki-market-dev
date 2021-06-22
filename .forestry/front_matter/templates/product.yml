@@ -3,26 +3,26 @@ label: Product
 hide_body: false
 fields:
 - type: text
-  name: 名前
+  name: title
   label: title
-# - type: datetime
-#   name: date
-#   label: date
+- type: datetime
+  name: date
+  label: date
 - type: image_gallery
-  name: 画像
+  name: images
   label: images
 - type: text
-  name: 説明
+  name: description
   label: description
 - type: text
-  name: 値段
+  name: price
   label: price
 - type: text
-  name: 割引値段
+  name: discount_price
   label: discount_price
-# - type: tag_list
-#   name: colors
-#   label: colors
 - type: tag_list
-  name: 量・サイズ
+  name: colors
+  label: colors
+- type: tag_list
+  name: sizes
   label: sizes
