@@ -1,0 +1,28 @@
+---
+label: Product
+hide_body: false
+fields:
+- type: text
+  name: 名前
+  label: title
+# - type: datetime
+#   name: date
+#   label: date
+- type: image_gallery
+  name: 画像
+  label: images
+- type: text
+  name: 説明
+  label: description
+- type: text
+  name: 値段
+  label: price
+- type: text
+  name: 割引値段
+  label: discount_price
+# - type: tag_list
+#   name: colors
+#   label: colors
+- type: tag_list
+  name: 量・サイズ
+  label: sizes
