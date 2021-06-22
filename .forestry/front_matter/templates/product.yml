@@ -27,3 +27,5 @@ fields:
   type: tag_list
   default: []
   label: タグ
+pages:
+- content/products/桜薪.md
