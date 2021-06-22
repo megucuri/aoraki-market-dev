@@ -1,24 +1,14 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: ''
+admin_path: 
 webhook_url: 
 sections:
 - type: heading
   label: Homepage
 - type: document
-  path: /data/homepage.yml
+  path: exampleSite/data/homepage.yml
   label: Homepage
-#   type: heading
-#   label: Blog Post
-# - type: directory
-#   path: /content/blog
-#   label: Post
-#   create: documents
-#   match: "**/*"
-#   new_doc_ext: '20191203072044'
-#   templates:
-#   - post
 - type: heading
   label: Products
 - type: directory
@@ -36,28 +26,21 @@ sections:
 - type: heading
   label: All Pages
 - type: directory
-  path: /content
+  path: content
   label: All Page
   create: all
-  match: "**/*"
-  - type: heading
-  label: Translations
-- type: directory
-  path: /i18n
-  label: i18n
-  create: documents
   match: "**/*"
 - type: heading
   label: Configuration
 - type: document
   path: config.toml
   label: Configuration
-# - type: directory
-#   path: content
-#   label: Pages
-#   create: all
-#   match: "*"
-upload_dir: /static/images
+- type: directory
+  path: content
+  label: Pages
+  create: all
+  match: "*"
+upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
