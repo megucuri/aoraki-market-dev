@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: heading
-  label: ホームページ
+  label: ページ
 - type: document
   path: exampleSite/data/homepage.yml
   label: ホームページ
@@ -19,8 +19,6 @@ sections:
 - type: document
   path: content/contact/_index.md
   label: お問い合わせ
-- type: heading
-  label: ページ
 - type: directory
   path: content
   label: 全ページ
