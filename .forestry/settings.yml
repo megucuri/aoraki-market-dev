@@ -5,12 +5,12 @@ admin_path:
 webhook_url: 
 sections:
 - type: heading
-  label: Homepage
+  label: ホームページ
 - type: document
   path: exampleSite/data/homepage.yml
   label: Homepage
 - type: heading
-  label: Products
+  label: 商品
 - type: directory
   path: content/products
   label: Product
