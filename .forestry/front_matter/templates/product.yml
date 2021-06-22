@@ -4,25 +4,22 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
-- type: datetime
-  name: date
-  label: date
+  label: 品名
 - type: image_gallery
   name: images
-  label: images
+  label: 画像
 - type: text
   name: description
-  label: description
+  label: 説明
 - type: text
   name: price
-  label: price
+  label: 値段
 - type: text
   name: discount_price
-  label: discount_price
+  label: 割引値段
 - type: tag_list
   name: colors
-  label: colors
+  label: 色
 - type: tag_list
   name: sizes
-  label: sizes
+  label: 量・サイズ
