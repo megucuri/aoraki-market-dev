@@ -20,3 +20,5 @@ fields:
     max: 
     labelField: 
   label: 商品種類
+pages:
+- content/products/薪.md
