@@ -23,3 +23,7 @@ fields:
 - type: tag_list
   name: sizes
   label: 量・サイズ
+- name: tag
+  type: tag_list
+  default: []
+  label: タグ
