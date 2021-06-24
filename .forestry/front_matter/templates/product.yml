@@ -23,9 +23,9 @@ fields:
 - type: tag_list
   name: sizes
   label: 量・サイズ
-- name: tag
+- name: category
   type: tag_list
   default: []
-  label: タグ
+  label: " カテゴリー"
 pages:
 - content/products/桜薪.md
