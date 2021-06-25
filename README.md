@@ -240,3 +240,25 @@ To get all the pages in "section". This example uses 'products' as a section. Wo
 Reference:
 https://www.youtube.com/watch?v=0GZxidrlaRM&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=6
 https://gohugo.io/templates/lists/v
+
+
+## Github Cammands
+```
+// Make new branch
+git branch nameOfBranch
+
+// Change branch
+git checkout nameOfBranch
+
+// To see if it changed branch
+git:(nameOfBranch)
+
+```
+### vim Cammands
+```
+// save and close
+wq
+```
+
+### To revert pull request
+https://saikeblog.com/2020/03/09/github%E3%81%A7pull-request%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B8%E3%82%92%E6%89%93%E3%81%A1%E6%B6%88%E3%81%99%E6%96%B9%E6%B3%95/

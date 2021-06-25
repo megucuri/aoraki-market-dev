@@ -5,7 +5,31 @@
       <div class="col-12 text-center mb-5">
         <h1 class="font-weight-bold">{{.Title}}</h1>
       </div>
+      {{/*  {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+              <div class="tagbutton">
+        <a href={{ .RelPermalink }} title="All pages with tag <i>{{$name}}</i>">{{$name}}</a>
+        <sup>{{$cnt}}</sup>
+              </div>
+        {{end}}
+      {{end}}  */}}
+      {{ $categories := $.Site.Taxonomies.categories.ByCount }}
+      {{ $categories }}
+               {{ $v1 := where $categories "Count" ">=" 1 }}
+               {{ $v2 := where $v1 "Term" "not in" (slice "hugo" "categories" "rss") }}
+               {{ range $v2 }}
+               {{ if .Term }}
+               {{ $tagURL := printf "categories/%s" .Term | relURL }}
+                 <span class="btn btn-outline-info btn-sm" style="margin-bottom: 5px;">
+                   {{ .Term }}
+                 </span>
+     {{ end }}
+    {{ end }}
+      {{ with .Params.categories }}<div>Categories:{{ range . }} <a href="/categories/{{ . }}/">{{ . }}</a>{{ end }}</div>{{ end }}
       {{ range (where .Site.RegularPages "Section" "products") }}
+      <div class="col-12 text-center mb-5"></div>
+        <h2>{{ .Params.tag }}</h2>
+      </div>
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
         <div class="block">
           <div class="gallery-overlay">
@@ -26,5 +50,4 @@
     </div>
   </div>
 </section>
-
 {{ end }}
