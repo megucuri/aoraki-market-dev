@@ -5,27 +5,26 @@
       <div class="col-12 text-center mb-5">
         <h1 class="font-weight-bold">{{.Title}}</h1>
       </div>
+      {{/*  {{ range .Site.Pages}}
+        {{ if in .Params.categories "" }}
+          {{ .Params.category  }}
+          {{ partial "pro.html" . }}
+        {{end}}
+      {{end}}  */}}
 
-
-      
+      {{ .Site.Taxonomies.categories }}
 
       
       {{ range (where .Site.RegularPages "Section" "products") }}
-        <div class="col-12 text-center mb-5"></div>
-        {{ $categories := $.Site.Taxonomies.categories.ByCount }}
-      {{ $v1 := where $categories "Count" ">=" 1 }}
-      {{ $v2 := where $v1 "Term" "not in" (slice "hugo" "categories" "rss") }}
-      {{ range $v2 }}
-        {{ if .Term }}
-          <h2>{{ .Term }}</h2>
-          {{ $tagURL := printf "categories/%s" .Term | relURL }}
-          <a href="{{ $tagURL }}" class="btn btn-outline-info btn-sm">
-            {{ .Term }}
-          </a>
-        {{ end }}
+
+      <div class="col-12 text-center mb-5"></div>
+      {{ with .Params.category }}
+        <h2>{{ . }}</h2>
+        {{ else }}
+        <h2>その他</h2>
       {{ end }}
-          <h2>{{ .Params.tag }}</h2>
-        </div>
+      </div>
+
         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
           <div class="block">
             <div class="gallery-overlay">
@@ -37,8 +36,15 @@
           </div>
           <div class="product-info">
           <h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
-          <p class="price">{{if .Params.discount_price}}{{site.Params.currency}}{{.Params.discount_price}}{{else}}{{site.Params.currency}}{{.Params.price}}{{end}}
-            {{if .Params.discount_price}}<s class="price">{{site.Params.currency}}{{ .Params.price }}</s>{{end}}
+          <p class="price">
+            {{if .Params.discount_price}}
+              {{site.Params.currency}}{{.Params.discount_price}}
+            {{else}}{{site.Params.currency}}
+                {{.Params.price}}
+            {{end}}
+            {{if .Params.discount_price}}
+              <s class="price">{{site.Params.currency}}{{ .Params.price }}</s>
+            {{end}}
             </p>
           </div>
         </div>
