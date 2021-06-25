@@ -17,16 +17,21 @@ fields:
 - type: text
   name: discount_price
   label: 割引値段
+- name: category
+  type: text
+  config:
+    required: false
+  label: カテゴリー
 - type: tag_list
   name: colors
   label: 色
 - type: tag_list
   name: sizes
   label: 量・サイズ
-- name: category
+- name: tags
   type: tag_list
   default: []
-  label: " カテゴリー"
+  label: タグ
 pages:
 - content/products/gyptsy-trailer.md
 - content/products/桜薪.md
