@@ -17,11 +17,6 @@ fields:
 - type: text
   name: discount_price
   label: 割引値段
-- name: category
-  type: text
-  config:
-    required: false
-  label: カテゴリー
 - type: tag_list
   name: colors
   label: 色
