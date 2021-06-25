@@ -1,5 +1,5 @@
 +++
-category = []
+category = ["トレーラーハウス"]
 colors = []
 description = "トレーラーハウスがええ"
 discount_price = "3000000"
