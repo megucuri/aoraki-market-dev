@@ -5,19 +5,48 @@
       <div class="col-12 text-center mb-5">
         <h1 class="font-weight-bold">{{.Title}}</h1>
       </div>
-      Tags
-      <ul>
-        {{ range .Site.Taxonomies.tags }}
-        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
-        {{ end }}
-      </ul> 
-      <hr>
-      categories
-      <ul>
+
+      <section>
+        <ul id="all-taxonomies">
+
+          {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies.categories }}
+          
+          {{/*
+          tax
+          {{ $taxonomy }} <br>
+            {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies }}
+            */}}
+           
+            {{ with  (printf "/%s" $taxonomy_term) }}
+                    <li><h2 href="">{{ $taxonomy_term }}</h2>
+                        <ul>
+                            {{ range $key, $value := $taxonomy }}
+                                <ul>
+                                        <li hugo-nav="{{ .Page.Permalink }}">
+                                            <a href="{{ .Page.Permalink }}">
+                                              {{ .LinkTitle }}
+                                            </a>
+                                        </li>
+                                </ul>
+                            {{ end }}
+                        </ul>
+                    </li>
+                {{ end }}
+
+            {{ end }}
+        </ul>
+      </section>
+
+
+
+      {{/*
         {{ range .Site.Taxonomies.categories }}
-        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+        ONly categories
+        <h2>
+          <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}
+        </h2>
         {{ end }}
-      </ul>
+        */}}
 
       
       {{ range (where .Site.RegularPages "Section" "products") }}
