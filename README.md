@@ -241,6 +241,42 @@ Reference:
 https://www.youtube.com/watch?v=0GZxidrlaRM&list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3&index=6
 https://gohugo.io/templates/lists/v
 
+## Taxonomies
+### Categories
+```
+// layouts/partials/all-taxonomies.html
+<section>
+  <ul>
+    // Change .Site.Taxonomies.categories to .Site.Taxonomies.tags or .Site.Taxonomies for both.
+    {{ range $taxonomy_term, $taxonomy := .Site.Taxonomies.categories }} 
+      {{ with  (printf "/%s" $taxonomy_term) }}
+        <li>
+          {{ with $taxonomy_term }}
+            <h2 href="">{{ . }}</h2>
+          {{ else }}
+            <h2>その他</h2>
+          {{ end }}
+          <ul>
+            {{ range $key, $value := $taxonomy }}
+              <li hugo-nav="{{ .Page.Permalink }}">
+                  <a href="{{ .Page.Permalink }}">
+                    {{ .LinkTitle }}
+                  </a>
+              </li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</section>
+```
+Rerfence:
+
+https://discourse.gohugo.io/t/list-all-the-categories-used-in-the-blog/10211
+
+https://gohugo.io/templates/taxonomy-templates/#render-a-sites-taxonomies
+
 
 ## Github Cammands
 ```
@@ -262,3 +298,5 @@ wq
 
 ### To revert pull request
 https://saikeblog.com/2020/03/09/github%E3%81%A7pull-request%E3%81%AE%E3%83%9E%E3%83%BC%E3%82%B8%E3%82%92%E6%89%93%E3%81%A1%E6%B6%88%E3%81%99%E6%96%B9%E6%B3%95/
+
+
