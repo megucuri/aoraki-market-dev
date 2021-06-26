@@ -8,6 +8,6 @@ images = ["/images/gypsy-caravan.jpeg"]
 price = "5000000"
 sizes = []
 tags = ["青", "モノづくり"]
-title = "Gyptsy trailer"
+title = "Gyptsy トレーラーハウス"
 
 +++
