@@ -1,4 +1,5 @@
 +++
+categories = "トレーラーハウス"
 category = "トレーラーハウス"
 colors = []
 description = "トレーラーハウスがええ"
