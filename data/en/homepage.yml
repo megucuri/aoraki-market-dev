@@ -1,9 +1,9 @@
 ############################# banner ############################
 banner:
-  enable : false
+  enable : true
   title : "森を育てる 森で創る"
   content : "今の時代で必要なことを問いで、発想を試し、伐採とモノ作りをしながら森と成長し続けています。"
-  image : "images/watch.png"
+  image : "images/mv.jpg"
   button:
    enable : false
    label : "Browse All Products"

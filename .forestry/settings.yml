@@ -6,9 +6,11 @@ webhook_url:
 sections:
 - type: heading
   label: ページ
+
 - type: document
   path: data/homepage.yml
   label: ホームページ
+
 - type: directory
   path: content/products
   label: 商品
@@ -16,24 +18,30 @@ sections:
   match: "**/*"
   templates:
   - product
+
 - type: document
   path: content/contact/_index.md
   label: お問い合わせ
+
 - type: directory
   path: content
   label: 全ページ
   create: all
   match: "**/*"
+
 - type: heading
   label: Configuration
+
 - type: document
   path: config.toml
   label: Configuration
+
 - type: directory
   path: content
   label: Pages
   create: all
   match: "*"
+  
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
