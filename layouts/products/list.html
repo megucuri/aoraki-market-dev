@@ -27,9 +27,7 @@
 						<div class="product-info">
 						<h4 class="mb-2">
 							<a href="{{.Permalink}}" class="link-title">
-								{{ $title := trim .Title "薪" }}
-								{{ $title := trim $title "木材" }}
-								{{ $title := trim $title "スウェーデントーチ" }}
+								{{ $title := trim .Title $taxonomy_term }}
 								{{ $title }}
 							</a>
 						</h4>
