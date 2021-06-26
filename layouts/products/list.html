@@ -25,7 +25,14 @@
 							<img class="img-fluid" src="{{range first 1 .Params.images}}{{.|absURL}}{{end}}" alt="{{.Title}}">
 						</div>
 						<div class="product-info">
-						<h4 class="mb-2"><a href="{{.Permalink}}" class="link-title">{{.Title}}</a></h4>
+						<h4 class="mb-2">
+							<a href="{{.Permalink}}" class="link-title">
+								{{ $title := trim .Title "薪" }}
+								{{ $title := trim $title "木材" }}
+								{{ $title := trim $title "スウェーデントーチ" }}
+								{{ $title }}
+							</a>
+						</h4>
 						<p class="price">
 							{{if .Params.discount_price}}
 							{{site.Params.currency}}
