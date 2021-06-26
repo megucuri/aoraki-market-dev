@@ -1,38 +1,24 @@
+################################### Default Configuration ############################
+# For deployment
+# baseurl = "https://megucuri.github.io/aoraki-market.github.io/"
+# For local
 baseurl = "http://localhost:1313/"
-disableLanguages = []
-googleAnalytics = ""
-summarylength = "20"
-theme = "vex-hugo"
 title = "Aoraki | Forestry and Fabrication"
-[Languages.en]
-copyright = "© Aoraki"
-languageCode = "ja"
+theme = "vex-hugo"
+# post excert
+summarylength = "20"
+# google analytics
+googleAnalytics = "" # Ex: UA-123-45
+# disable language
+disableLanguages = [] # disable language from here
+
+# unsafe html
 [markup.goldmark.renderer]
 unsafe = true
-[[menu.footer]]
-name = "Terms & Conditions"
-url = "terms-conditions"
-weight = 3
-[[menu.footer]]
-name = "Privacy Policy"
-url = "privacy-policy"
-weight = 4
-[[menu.main]]
-name = "Home"
-url = "/"
-weight = 1
-[[menu.main]]
-name = "商品"
-url = "products"
-weight = 2
-[params]
-author = "Binagai"
-contact_form_action = "#"
-currency = "¥"
-description = "This is meta description"
-logo = "images/aoraki-logo.svg"
-logo_width = "100px"
-snipcart_api = "NTM1N2I3MzUtN2FlMi00ZjIzLThlMWYtZWNjY2ZhZTkzNDEwNjM3NTkwMDEwMzI2ODY3Njcy"
+
+#################################### Plugins ##########################################
+
+# CSS Plugins
 [[params.plugins.css]]
 link = "https://fonts.googleapis.com/css?family=Droid+Serif:400|Josefin+Sans:300,400,600,700"
 [[params.plugins.css]]
@@ -43,6 +29,8 @@ link = "plugins/themefisher-font/themefisher-font.min.css"
 link = "plugins/slick/slick.min.css"
 [[params.plugins.css]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.css"
+
+# JS Plugins
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.js"
 [[params.plugins.js]]
@@ -51,11 +39,105 @@ link = "plugins/bootstrap/bootstrap.min.js"
 link = "plugins/slick/slick.min.js"
 [[params.plugins.js]]
 link = "https://cdn.snipcart.com/themes/v3.0.27/default/snipcart.js"
+
+
+###################################### Navigation ######################################
+
+# homepage section menu
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "商品"
+url = "products"
+weight = 2
+
+# [[menu.main]]
+# name = "Blog"
+# url = "blog"
+# weight = 3
+
+# [[menu.main]]
+# name = "Review"
+# pre = "#"
+# url = "testimonial"
+# weight = 4
+
+# [[menu.main]]
+# name = "Contact"
+# url = "contact"
+# weight = 5
+
+# # footer menu
+# [[menu.footer]]
+# name = "Blog"
+# url = "blog"
+# weight = 1
+
+# [[menu.footer]]
+# name = "Contact"
+# url = "contact"
+# weight = 2
+
+[[menu.footer]]
+name = "Terms & Conditions"
+url = "terms-conditions"
+weight = 3
+
+[[menu.footer]]
+name = "Privacy Policy"
+url = "privacy-policy"
+weight = 4
+
+
+########################### Default parameters ##########################
+[params]
+logo = "images/aoraki-logo.svg"
+logo_width = "100px"
+# Meta data
+description = "This is meta description"
+author = "Binagai"
+# currency
+currency = "¥"
+# contact form action
+contact_form_action = "#" # contact form works with https://formspree.io
+# snipcart public api key
+snipcart_api = "NTM1N2I3MzUtN2FlMi00ZjIzLThlMWYtZWNjY2ZhZTkzNDEwNjM3NTkwMDEwMzI2ODY3Njcy"
+
+# Preloader
 [params.preloader]
 enable = true
-preloader = ""
+preloader = "" # use .png , .svg or .gif format
+
+# Subscription
 [params.subscription]
-mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074"
-mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074"
+# mailchimp subsciption
+mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
+mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
+
+################################### Taxonomies #####################################
 [taxonomies]
-category = ["trailer house", "薪", "木材"]
+category = "categories"
+tag = "tags"
+
+
+################################### Japanese language #####################################
+[Languages.en]
+# languageName = "Ja"
+languageCode = "ja"
+# contentDir = "content/Japanese"
+# weight = 1
+# copyright
+copyright = "© Aoraki"
+
+
+################################### French language #####################################
+# [Languages.fr]
+# languageName = "Fr"
+# languageCode = "ja"
+# contentDir = "content/french"
+# weight = 2
+# # copyright
+# copyright = "Designed By [Themefisher](https://themefisher.com/) & Developed By [Gethugothemes](https://gethugothemes.com/)"

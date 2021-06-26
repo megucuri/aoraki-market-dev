@@ -5,14 +5,19 @@
       <div class="col-12 text-center mb-5">
         <h1 class="font-weight-bold">{{.Title}}</h1>
       </div>
-      {{/*  {{ range .Site.Pages}}
-        {{ if in .Params.categories "" }}
-          {{ .Params.category  }}
-          {{ partial "pro.html" . }}
-        {{end}}
-      {{end}}  */}}
-
-      {{ .Site.Taxonomies.categories }}
+      Tags
+      <ul>
+        {{ range .Site.Taxonomies.tags }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+        {{ end }}
+      </ul> 
+      <hr>
+      categories
+      <ul>
+        {{ range .Site.Taxonomies.categories }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+        {{ end }}
+      </ul>
 
       
       {{ range (where .Site.RegularPages "Section" "products") }}
