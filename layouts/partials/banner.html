@@ -3,22 +3,18 @@
 {{- if $data.homepage.banner.enable }}
 {{- with $data.homepage.banner }}
 <!-- hero area -->
-<section class="section">
+<section class="section c-banner" style="background-image: url('{{ .image | absURL }}');">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 text-center mb-5 mb-md-0">
-				<img class="img-fluid" src="{{ .image | absURL }}" alt="">
-			</div>
-			<div class="col-md-6 align-self-center text-center text-md-left">
-				<div class="block">
-					<h1 class="font-weight-bold mb-4 font-size-60">{{ .title | markdownify }}</h1>
-					<p class="mb-4">{{ .content | markdownify }}</p>
-					{{ if .button.enable }}
+			<div class="col-md-12 text-center mb-5 mb-md-0">
+				<h1 class="font-weight-bold mb-4 font-size-60">{{ .title | markdownify }}</h1>
+				<p class="mb-4">{{ .content | markdownify }}</p>
+				{{ if .button.enable }}
 					{{ with .button }}
-					<a href="{{.link|absLangURL}}" class="btn btn-main">{{.label}}</a>
+						<a href="{{.link|absLangURL}}" class="btn btn-main">{{.label}}</a>
 					{{ end }}
-					{{ end }}
-				</div>
+				{{ end }}
+				<i id="header-arrow" class="tf-ion-android-arrow-down"></i>
 			</div>
 		</div><!-- .row close -->
 	</div><!-- .container close -->

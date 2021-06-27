@@ -1,0 +1,372 @@
+/* ==========================================================================
+ 	Page Sizing
+ ========================================================================== */
+
+$max-width: 108rem;
+$gutter: 2.4rem;
+
+
+/* ==========================================================================
+    Colors
+     ========================================================================== */
+
+$primary-color: #00002e;
+$primary-color-mid: #184b82;
+$primary-color-light: #1c6fc9;
+$primary-color-transparent:#00002ed9;
+$white-shade:#ddd;
+$white-shade-transparent:#ffffffc9;
+$gray-shade: #202035;
+
+
+
+/* ==========================================================================
+     Screen Sizing / Breakpoints
+     Reference https://zenn.dev/tak_dcxi/articles/2cc1828e9c1fe2
+  ========================================================================== */
+@mixin responsive($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+
+    // マップ型で定義されていない値が呼び出された時はエラーを返す
+    @else {
+        @error "指定されたブレークポイントは定義されていません。"+"指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+    }
+}
+
+$breakpoints: ('md': (min-width: 768px),
+    'lg': (min-width: 1024px),
+    'xl': (min-width: 1400px)) !default;
+
+/* ==========================================================================
+   Font Family
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&family=Roboto:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
+$primary-font-family: 'Noto Sans JP',
+"Roboto Slab",
+sans-serif;
+
+$secondray-font-family: 'Potta One',
+"Roboto Slab",
+sans-serif;
+
+
+/* ==========================================================================
+    Typograpy
+========================================================================== */
+
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+    background-color: $white-shade;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6em;
+    font-family: $primary-font-family;
+    font-size: calc(1.6rem + .6vw);
+    color: $primary-color;
+
+    @include responsive(lg) {
+        font-size: 2rem
+    }
+}
+
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $secondray-font-family;
+}
+
+
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 120%;
+    margin-top: 0;
+    margin-bottom: 0%;
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 1.2em;
+    // letter-spacing: -2px;
+    // text-indent: -3px;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.2em;
+    // letter-spacing: -1px;
+    // text-indent: -2px;
+}
+
+h3 {
+    font-size: 3.5rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+h5 {
+    font-size: 2.5rem;
+}
+
+h6 {
+    font-size: 2rem;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $primary-color-mid;
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: $primary-color-light;
+    }
+}
+
+p,
+ul,
+ol {
+    line-height: 1.6em;
+    margin: 1em 0;
+}
+
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+    margin: 0.4em 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #efefef;
+    margin: 3.2em 0;
+    padding: 0;
+}
+
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1em 0 1em -2.2em;
+    padding: 0 0 0 1em;
+    /*border-left: #4a4a4a 0.4em solid;*/
+    font-weight: lighter;
+}
+
+blockquote p {
+    margin: 0.8em 0;
+}
+
+.quo {
+    /*float: left;*/
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+blockquote small:before {
+    content: "\2014 \00A0";
+}
+
+blockquote cite {
+    font-weight: bold;
+}
+
+blockquote cite a {
+    font-weight: normal;
+}
+
+dl {
+    margin: 1.6em 0;
+}
+
+dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em;
+}
+
+mark {
+    background-color: #ffc336;
+}
+
+code,
+tt {
+    padding: 3px 5px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.75em;
+    /*white-space: pre;*/
+    border: 1px solid #e3edf3;
+    background: #f7fafb;
+    border-radius: 2px;
+    color: #3a4145;
+}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #e3edf3;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #f7fafb;
+    border-radius: 3px;
+}
+
+pre code,
+tt {
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+kbd {
+    display: inline-block;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    border: #ccc 1px solid;
+    color: #666;
+    text-shadow: #fff 0 1px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+}
+
+table {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+
+table th,
+table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #efefef;
+}
+
+table th {
+    color: #000;
+}
+
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+table tbody+tbody {
+    border-top: 2px solid #efefef;
+}
+
+table table table {
+    background-color: #fff;
+}
+
+table tbody>tr:nth-child(odd)>td,
+table tbody>tr:nth-child(odd)>th {
+    background-color: #f6f6f6;
+}
+
+table.plain {
+
+    tbody>tr:nth-child(odd)>td,
+    tbody>tr:nth-child(odd)>th {
+        background: transparent;
+    }
+}
+
+li {
+    margin-left: 30px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.bult {
+    display: inline;
+    float: left;
+    padding-top: 7px;
+}
+
+* {
+    box-sizing: border-box;
+}
