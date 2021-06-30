@@ -40,7 +40,8 @@ sections:
   path: content
   label: Pages
   create: all
-  match: "*"
+  # match: "*"
+  match: "**/*"
   
 upload_dir: static/images
 public_path: "/images"

@@ -5,9 +5,9 @@
     <div class="row">
       {{ range (where .Site.RegularPages "Section" "products") }}
           {{range first 1 .Params.images}}
-          {{ . }} <br>
-          {{.|relURL}} <br>
-          {{.|absURL}}
+          dot -- {{ . }} <br>
+          relURL -- {{.|relURL}} <br>
+          {{.|absURL}}<br>
           {{/*  {{.|absURL}}  */}}
           {{end}}
       {{ end }}
