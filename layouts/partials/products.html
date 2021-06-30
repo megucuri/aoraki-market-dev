@@ -3,9 +3,7 @@
 <section class="gallery section" id="products">
   <div class="container">
     <div class="row">
-      {{.Site.RegularPages}}
       {{ range (where .Site.RegularPages "Section" "products") }}
-      {{ . }}
           {{range first 1 .Params.images}}
           dot -- {{ . }} <br>
           relURL -- {{.|relURL}} <br>
