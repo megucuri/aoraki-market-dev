@@ -3,14 +3,18 @@
 <section class="gallery section" id="products">
   <div class="container">
     <div class="row">
+      {{.Site.RegularPages}}
       {{ range (where .Site.RegularPages "Section" "products") }}
+      {{ . }}
           {{range first 1 .Params.images}}
           dot -- {{ . }} <br>
           relURL -- {{.|relURL}} <br>
           {{.|absURL}}<br>
-          {{/*  {{.|absURL}}  */}}
+
           {{end}}
       {{ end }}
+      {{ .Site.BaseURL}}
+      
       <div class="col-md-12">
         <div class="heading">
           <h2>{{ $data.homepage.products.title | markdownify }}</h2>
