@@ -1,8 +1,16 @@
 {{ $data := index .Site.Data .Site.Language.Lang }}
 {{ if $data.homepage.products.enable }}
-<section class="gallery" id="products">
+<section class="gallery section" id="products">
   <div class="container">
     <div class="row">
+      {{ range (where .Site.RegularPages "Section" "products") }}
+          {{range first 1 .Params.images}}
+          {{ . }} <br>
+          {{.|relURL}} <br>
+          {{.|absURL}}
+          {{/*  {{.|absURL}}  */}}
+          {{end}}
+      {{ end }}
       <div class="col-md-12">
         <div class="heading">
           <h2>{{ $data.homepage.products.title | markdownify }}</h2>

@@ -24,4 +24,8 @@
     $("#header-arrow").click(function () {
         srcTo(first_section);
     });
+
+    $('.c-category:odd').addClass('js-odd');
 })(jQuery);
+
+

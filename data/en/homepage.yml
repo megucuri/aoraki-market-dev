@@ -66,18 +66,18 @@ about_product:
   title : "林業の目的"
   items:
     # about product item loop
-    - image : "https://lh3.googleusercontent.com/proxy/1ToF7_4ry6wa6VreFQZszEhpEnSzR-QMosYdrvHCmfIZadOdro_6R583X4yr_e3-rvrwmQsmkQBGMbmiAy2w4-8PTh4KwXJtZ-ZNj00DhbFVy10ZI35T7pDO6jCpjXdghRcxP7w-5Q"
+    - image : "http://jiyeon-geography-forest.weebly.com/uploads/5/1/8/1/51813747/9112874_orig.png"
       title : "今までの山林"
-      content : "アクセスしずらい、むしろ危ない。森は主に「木材生産」が目的として使われてきました。しかし、山林が持ってるポテンシャルはそれだけではないです。"
+      content : "アクセスしずらい、むしろ危ない。\n\n森は主に「木材生産」が目的として使われてきました。\n\nしかし、山林が持ってるポテンシャルはそれだけではないです。"
       button:
         enable : false
         label : "Check Features"
         link : "#"
         
     # about product item loop
-    - image : "images/showcase/showcase-3.png"
+    - image : "https://travel.amerikanki.com/wp-content/uploads/2014/01/Most-Beautiful-Forests-Around-the-World.jpg"
       title : "森づくり"
-      content : "山と森が豊かの日本なのに触れ合う人と時間は少ない。しかも年々高まる現代人ストレスなどの疑問から私たちは本気で考えてた解決策の一つは森との触れ合いではないかと思います。森づくりをすることによって楽しみや癒しの場所ができます。"
+      content : "山と森が豊かの日本なのに触れ合う人と時間は少ない。年々高まる現代人ストレスなどが増えとともに山の管理が減り、悪いサイクルにハマる。\n\nこの疑問から私たちは本気で考えた解決策の一つは森づくりです。これをすることによって山林との触れ合える。森は楽しみや癒しの場所になりいずれ生活、社会、と次世代に素晴らしい影響になると思います。"
       button:
         enable : false
         label : "Check Features"
@@ -90,7 +90,7 @@ promo:
   # bg_image : "images/call-to-action.jpg"
   bg_image : "https://i.pinimg.com/originals/0b/aa/83/0baa834c26c4c105ee87dbcb20c88ae2.jpg"
   title : "トレーラーハウス"
-  content : "森からくれた恵を使うことによって、もっと森を愛せる。"
+  content : "森からくれた恵を使うことによって、もっと森を愛せる。\n\n 小さな住いはどうですか？"
 
 
 

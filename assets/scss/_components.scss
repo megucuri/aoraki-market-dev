@@ -10,6 +10,7 @@ Nav
 }
 
 .navbar-light .navbar-nav {
+    margin-top: 0;
 
     .nav-link {
         transition: .3s ease-out;
@@ -61,6 +62,7 @@ MV
     background-color: $primary-color;
 }
 
+// Buttons
 .btn {
     transition: .2s ease-out;
     background-color: $primary-color;
@@ -74,6 +76,17 @@ MV
     }
 }
 
+.snipcart-cart-button {
+    &--highlight {
+        background: $primary-color;
+        transition: .3s ease-out;
+
+        &:hover {
+            background-color: $primary-color-light;
+        }
+    }
+}
+
 
 
 // Products (Gallery)
@@ -83,4 +96,22 @@ MV
             background: $primary-color;
         }
     }
+}
+
+// paralax
+.call-to-action {
+    height: 100vh;
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+// Category
+.js-odd {
+    background-color: lighten($primary-color-light, 50%);
 }

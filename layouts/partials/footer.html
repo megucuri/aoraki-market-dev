@@ -27,6 +27,7 @@
 {{ range site.Params.plugins.js}}
 <script src="{{ .link | absURL }}"></script>
 {{ end }}
+
 {{with resources.Get "js/index.ts" }}
 {{ $js := resources.Get . | minify | js.Build }}
 <script src="{{ $js.Permalink }}"></script>
