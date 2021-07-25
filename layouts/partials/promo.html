@@ -2,7 +2,7 @@
 
 {{- if $data.homepage.promo.enable }}
 {{- with $data.homepage.promo }}
-<section class="call-to-action section bg-opacity" style="background-image: url('{{ .bg_image | absURL }}');">
+<section class="call-to-action section bg-opacity" style="background-image: url('{{ .bg_image | relURL }}');">
   <div class="container">
     <div data-aos="zoom-in" class="row">
       <div class="col-lg-6 col-md-8 mx-auto text-white">
