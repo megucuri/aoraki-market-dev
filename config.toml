@@ -1,8 +1,11 @@
 ################################### Default Configuration ############################
 # For deployment
 # baseURL = "https://megucuri.github.io/aoraki-market.github.io/"
-# For local 
-baseurl = "http://localhost:1313/"
+
+# Add relativeURLs = "True" for exchange of baseURL
+relativeURLs = "True"
+# earase baseURL
+baseURL = "" 
 title = "Aoraki | Forestry and Fabrication"
 theme = "vex-hugo"
 # post excert
