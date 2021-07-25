@@ -179,7 +179,17 @@ Create another folder in "assets" and name it "js" with a file called "index.tx"
 Create "_markup" folder then in it a "render-link.html" file. The path should look like this...
 ```
 layouts/_default/_markup/render-link.html
+
 ```
+Terminal command to make directories in directory
+```
+mkdir -p layouts/_default/_markup
+```
+Then in _markup folder
+```
+touch layouts/_default/_markup/render-link.html  
+```
+
 In the render-link.html
 
 Add the folowing code.
