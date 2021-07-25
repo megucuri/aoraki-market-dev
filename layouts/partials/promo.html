@@ -4,7 +4,7 @@
 {{- with $data.homepage.promo }}
 <section class="call-to-action section bg-opacity" style="background-image: url('{{ .bg_image | absURL }}');">
   <div class="container">
-    <div class="row">
+    <div data-aos="zoom-in" class="row">
       <div class="col-lg-6 col-md-8 mx-auto text-white">
         <h2 class="subheading  text-white">{{ .title | markdownify }}</h2>
         {{ .content | markdownify }}
